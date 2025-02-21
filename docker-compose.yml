@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: noumko009@  # Remplace par un mot de passe sécurisé
+      MYSQL_DATABASE: portfolio_db       # Crée une base de données par défaut
+      MYSQL_USER: kol_sec_admin         # Crée un utilisateur
+      MYSQL_PASSWORD: noumko009       # Mot de passe de l'utilisateur
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql        # Persiste les données de MySQL
+    restart: always                      # Redémarre automatiquement le conteneur
+
+volumes:
+  mysql_data:
