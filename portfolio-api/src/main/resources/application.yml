@@ -1,0 +1,21 @@
+#spring.application.name=portfolio-api
+spring:
+  application:
+  name: portfolio-api
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/portfolio_db
+    username: kol_sec_admin
+    password: noumko009
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+
+
+server:
+  port: 9001
+
+  servlet:
+    context-path: /portfolio-api
