@@ -1,4 +1,9 @@
 package fr.kolgna_sec.portfolio_api.skill.repositories;
 
-public interface SkillRepository {
+import fr.kolgna_sec.portfolio_api.skill.bean.Skill;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface SkillRepository extends JpaRepository<Skill, Long> {
 }

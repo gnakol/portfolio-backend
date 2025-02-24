@@ -65,7 +65,6 @@ public class TrainingService implements Webservices<TrainingDTO> {
         Optional<Account> account = this.accountRepository.findById(e.getAccount_id());
         Optional<Establishment> establishment = this.establishmentRepository.findById(e.getEstablishment_id());
 
-        Training trainingIn = this.trainingMapper.fromTrainingDTO(e);
 
         return this.trainingMapper.fromTraining(this.trainingRepository.findById(id)
                 .map(training -> {
