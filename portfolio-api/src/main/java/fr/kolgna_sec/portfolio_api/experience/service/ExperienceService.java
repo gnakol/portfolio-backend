@@ -91,8 +91,8 @@ public class ExperienceService implements Webservices<ExperienceDTO> {
                     Optional.ofNullable(e.getStartDate()).ifPresent(existingExperience::setStartDate);
                     Optional.ofNullable(e.getEndDate()).ifPresent(existingExperience::setEndDate);
                     Optional.ofNullable(e.getCompanyName()).ifPresent(existingExperience::setCompanyName);
-                    Optional.of(experienceType.get()).ifPresent(existingExperience::setExperienceType);
-                    Optional.of(account.get()).ifPresent(existingExperience::setAccount);
+                    experienceType.ifPresent(existingExperience::setExperienceType);
+                    account.ifPresent(existingExperience::setAccount);
                     Optional.ofNullable(e.getSkillsAcquired()).ifPresent(existingExperience::setSkillsAcquired);
 
                     return this.experienceMapper.fromExperience(this.experienceRepository.save(existingExperience));

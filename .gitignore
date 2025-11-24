@@ -1,2 +1,23 @@
-portfolio-api/portfolio-api.tar
-claude-images/
+# --- Docs locaux qui ne vont pas sur GitHub ---
+/ADVANCED_TLS_SCAN.md
+/CLAUDE.md
+/GUIDE_SIMULATION_FIREWALL.md
+/K8S_PROMETHEUS_SETUP.md
+/KEYCLOAK_MIGRATION_GUIDE.md
+/TLS_DASHBOARD_TEMPLATE_COMPLET.md
+/claude-images/
+
+# --- Fichiers de dev local / pas pour la prod ---
+/docker-compose.yml
+/portfolio_db_backup.sql
+
+# Éventuellement, si tu ne veux JAMAIS de dump SQL
+# mais à utiliser avec prudence si tu as des scripts .sql utiles
+# *.sql
+
+# --- Backend : config locale uniquement ---
+portfolio-api/src/main/resources/application.yml
+
+# --- JAR locaux à ne jamais versionner ---
+portfolio-api/mysql-connector-java-*.jar
+
